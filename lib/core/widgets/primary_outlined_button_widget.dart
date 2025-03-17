@@ -38,7 +38,7 @@ class PrimaryOutlinedButtonWidget extends StatelessWidget {
       ),
       child: Text(
         buttonText ?? "",
-        style: TextStyle(color: textColor ?? AppColors.primaryColor, fontSize: fontSize ?? 16.sp, fontWeight: FontWeights.bold),
+        style: TextStyle(color: textColor ?? AppColors.primaryColor, fontSize: fontSize ?? 16.sp, fontWeight: FontWeightHelper.bold),
       ),
     );
   }

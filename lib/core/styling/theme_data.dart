@@ -11,7 +11,7 @@ abstract class AppThemeData {
     fontFamily: AppFonts.mainFontFamily,
     buttonTheme: ButtonThemeData(
       buttonColor: AppColors.primaryColor,
-      disabledColor: AppColors.secondaryColor,
+      disabledColor: AppColors.grey,
 
     )
   );
