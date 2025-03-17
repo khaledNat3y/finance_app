@@ -11,14 +11,17 @@ class CustomTextField extends StatelessWidget {
   final bool? obscureText;
   final TextInputType? inputType;
   final String? Function(String?)? validator;
+  final TextEditingController? controller;
 
-  const CustomTextField({super.key, required this.hintText, this.suffixIcon, this.width, this.obscureText, this.inputType, this.validator});
+  const CustomTextField({super.key, required this.hintText, this.suffixIcon, this.width, this.obscureText, this.inputType, this.validator, this.controller});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? 331.w,
       child: TextFormField(
+        controller: controller,
+        autovalidateMode: AutovalidateMode.always,
         cursorColor: AppColors.primaryColor,
         cursorErrorColor: AppColors.errorColor,
         obscureText: obscureText ?? false,
@@ -28,8 +31,8 @@ class CustomTextField extends StatelessWidget {
           hintText: hintText ?? "",
           hintStyle: TextStyle(
             fontSize: 15.sp,
-            color: AppColors.secondaryColor,
-            fontWeight: FontWeights.medium,
+            color: AppColors.grey,
+            fontWeight: FontWeightHelper.medium,
           ),
           suffixIcon: suffixIcon,
           contentPadding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
@@ -37,6 +40,7 @@ class CustomTextField extends StatelessWidget {
           enabledBorder: buildOutlineInputBorder(),
           focusedBorder: buildOutlineInputBorder(),
           errorBorder: buildOutlineInputBorder(color: AppColors.errorColor),
+          focusedErrorBorder: buildOutlineInputBorder(color: AppColors.errorColor),
           filled: true,
           fillColor: Color(0xffF7F8F9),
         ),

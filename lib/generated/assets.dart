@@ -6,5 +6,8 @@ class Assets {
   static const String fontsUrbanistMedium = 'assets/fonts/Urbanist-Medium.ttf';
   static const String fontsUrbanistRegular = 'assets/fonts/Urbanist-Regular.ttf';
   static const String imagesOnBoardingImage = 'assets/images/onBoardingImage.png';
+  static const String svgsAppleIcon = 'assets/svgs/apple_icon.svg';
+  static const String svgsFacebookIcon = 'assets/svgs/facebook_icon.svg';
+  static const String svgsGoogleIc = 'assets/svgs/google_ic.svg';
 
 }

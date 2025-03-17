@@ -1,7 +1,16 @@
-import 'dart:ui';
 
-class FontWeights {
-  static FontWeight regular = FontWeight.w400;
+
+import 'package:flutter/material.dart';
+
+abstract class FontWeightHelper {
+
+  static const FontWeight thin = FontWeight.w100;
+
+  static const FontWeight extraLight = FontWeight.w200;
+
+  static const FontWeight light = FontWeight.w300;
+
+  static const FontWeight regular = FontWeight.w400;
 
   static const FontWeight medium = FontWeight.w500;
 
@@ -10,5 +19,4 @@ class FontWeights {
   static const FontWeight bold = FontWeight.w700;
 
   static const FontWeight extraBold = FontWeight.w800;
-
 }
