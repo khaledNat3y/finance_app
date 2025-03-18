@@ -35,7 +35,9 @@ class OnBoardingScreen extends StatelessWidget {
             height: 56.h,
           ),
           verticalSpace(15),
-          PrimaryOutlinedButtonWidget(buttonText: "Register", onPress: () {}),
+          PrimaryOutlinedButtonWidget(buttonText: "Register", onPress: () {
+            GoRouter.of(context).pushNamed(Routes.registerScreen);
+          }),
           verticalSpace(46),
           Text(
             "Continue as a guest",

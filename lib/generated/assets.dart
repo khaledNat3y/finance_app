@@ -9,5 +9,6 @@ class Assets {
   static const String svgsAppleIcon = 'assets/svgs/apple_icon.svg';
   static const String svgsFacebookIcon = 'assets/svgs/facebook_icon.svg';
   static const String svgsGoogleIc = 'assets/svgs/google_ic.svg';
+  static const String svgsSuccessMark = 'assets/svgs/success_mark.svg';
 
 }

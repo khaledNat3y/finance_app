@@ -67,4 +67,18 @@ abstract class AppStyles {
     color: AppColors.primaryColor,
   );
 
+  static TextStyle font16GreyMedium = TextStyle(
+    fontSize: 16.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.grey,
+  );
+
+  static TextStyle font15GreyMedium = TextStyle(
+    fontSize: 15.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.grey,
+  );
+
 }
