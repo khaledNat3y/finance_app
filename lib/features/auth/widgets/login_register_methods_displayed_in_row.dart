@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/styling/spacing.dart';
-import '../../../../generated/assets.dart';
-import 'login_method_widget.dart';
+import '../../../core/styling/spacing.dart';
+import '../../../generated/assets.dart';
+import '../ui/login_screen/widgets/login_method_widget.dart';
 
-class LoginMethodsDisplayedInRow extends StatelessWidget {
-  const LoginMethodsDisplayedInRow({super.key});
+class LoginRegisterMethodsDisplayedInRow extends StatelessWidget {
+  const LoginRegisterMethodsDisplayedInRow({super.key});
 
   @override
   Widget build(BuildContext context) {

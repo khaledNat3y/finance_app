@@ -21,7 +21,7 @@ class CustomTextField extends StatelessWidget {
       width: width ?? 331.w,
       child: TextFormField(
         controller: controller,
-        autovalidateMode: AutovalidateMode.always,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         cursorColor: AppColors.primaryColor,
         cursorErrorColor: AppColors.errorColor,
         obscureText: obscureText ?? false,

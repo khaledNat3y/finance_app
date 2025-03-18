@@ -2,13 +2,16 @@ import 'package:finance_app/core/styling/app_styles.dart';
 import 'package:finance_app/core/styling/spacing.dart';
 import 'package:finance_app/core/widgets/custom_text_field.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
-import 'package:finance_app/features/auth/ui/widgets/login_methods_displayed_in_row.dart';
-import 'package:finance_app/features/auth/ui/widgets/or_login_with_widget.dart';
+import 'package:finance_app/features/auth/widgets/login_register_methods_displayed_in_row.dart';
+import 'package:finance_app/features/auth/widgets/or_login_register_with.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/styling/app_colors.dart';
-import '../../../core/widgets/custom_back_button.dart';
-import '../../../generated/assets.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/styling/app_colors.dart';
+import '../../../../core/widgets/custom_back_button.dart';
+import '../../../../generated/assets.dart';
+import '../../widgets/dont_or_have_account.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -31,13 +34,13 @@ class _LoginScreenState extends State<LoginScreen> {
     formKey = GlobalKey<FormState>();
   }
 
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-    formKey.currentState!.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   emailController.dispose();
+  //   passwordController.dispose();
+  //   formKey.currentState!.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -99,9 +102,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 verticalSpace(15),
                 Align(
                   alignment: Alignment.centerRight,
-                  child: Text(
-                    "Forgot Password?",
-                    style: AppStyles.font14GreySemiBold,
+                  child: GestureDetector(
+                    onTap: (){
+                      GoRouter.of(context).pushReplacementNamed(Routes.forgetPasswordScreen);
+                    },
+                    child: Text(
+                      "Forgot Password?",
+                      style: AppStyles.font14GreySemiBold,
+                    ),
                   ),
                 ),
                 verticalSpace(30),
@@ -112,30 +120,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                 }),
                 verticalSpace(35),
-            
                 /// or login with
-                OrLoginWithWidget(),
+                OrLoginRegisterWith(title: "Or Login with",),
                 verticalSpace(22),
-                LoginMethodsDisplayedInRow(),
+                LoginRegisterMethodsDisplayedInRow(),
                 verticalSpace(90),
-                Align(
-                  alignment: Alignment.center,
-                  child: Text.rich(
-                    TextSpan(
-                      text: "Don't have an account? ",
-                      style: AppStyles.font15PrimaryColorMedium,
-                      children: [
-                        TextSpan(
-                          text: "Register",
-                          style: AppStyles.font15AccentColorBold.copyWith(
-                            decoration: TextDecoration.underline,
-                            decorationColor: AppColors.accentColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                DontOrHaveAccount(title: "Don't have an account? ", subTitle: "Register", onPressed: (){
+                  GoRouter.of(context).pushNamed(Routes.registerScreen);
+                },),
               ],
             ),
           ),
@@ -144,3 +136,5 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+
