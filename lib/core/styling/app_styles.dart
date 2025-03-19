@@ -80,5 +80,11 @@ abstract class AppStyles {
     fontWeight: FontWeightHelper.medium,
     color: AppColors.grey,
   );
+  static TextStyle font22PrimaryColorBold = TextStyle(
+    fontSize: 22.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.primaryColor,
+  );
 
 }

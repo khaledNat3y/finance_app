@@ -35,7 +35,7 @@ class PrimaryButtonWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(bordersRadius ?? 8.r),
         ),
         padding: padding,
-        fixedSize: Size(width ?? 331.w, height ?? 50.h),
+        fixedSize: Size(width ?? 331.w, height ?? 56.h),
       ),
       child: Text(
         buttonText ?? "",

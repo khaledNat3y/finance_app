@@ -1,55 +1,29 @@
-import 'package:finance_app/core/styling/app_colors.dart';
-import 'package:finance_app/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'core/styling/spacing.dart';
-import 'core/widgets/primary_button_widget.dart';
-import 'core/widgets/primary_outlined_button_widget.dart';
+import 'core/routing/app_router.dart';
+import 'core/styling/theme_data.dart';
 
-class FinanceApp extends StatefulWidget {
+class FinanceApp extends StatelessWidget {
   const FinanceApp({super.key});
 
   @override
-  State<FinanceApp> createState() => _FinanceAppState();
-}
-
-class _FinanceAppState extends State<FinanceApp> {
-  bool obscureText = true;
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Finance App"), centerTitle: true),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            PrimaryButtonWidget(buttonText: "Login", onPress: () {}),
-            verticalSpace(15),
-            PrimaryOutlinedButtonWidget(buttonText: "Register", onPress: () {}),
-            verticalSpace(15),
-            CustomTextField(hintText: "Email"),
-            CustomTextField(
-              hintText: "Email",
-              obscureText: obscureText,
-              suffixIcon: IconButton(
-                onPressed: () {
-                  setState(() {
-                    obscureText = !obscureText;
-                  });
-                },
-                icon:
-                    obscureText
-                        ? Icon(Icons.visibility_off, color: AppColors.darkGrey)
-                        : Icon(
-                          Icons.visibility,
-                          color: AppColors.darkGrey,
-                        ),
-              ),
-            ),
-          ],
-        ),
-      ),
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown
+    ]);
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      builder: (context, child) {
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: AppThemeData.lightTheme,
+          routerConfig: AppRouter.goRouter,
+        );
+      },
     );
   }
 }

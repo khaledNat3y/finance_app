@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import '../../../core/styling/app_colors.dart';
 import '../../../core/styling/app_styles.dart';
 
-class DontOrHaveAccount extends StatelessWidget {
+class CustomRichText extends StatelessWidget {
   final String title;
   final String subTitle;
   final void Function()? onPressed;
-  const DontOrHaveAccount({super.key, required this.title, required this.subTitle, this.onPressed});
+  const CustomRichText({super.key, required this.title, required this.subTitle, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
