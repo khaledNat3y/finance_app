@@ -4,14 +4,14 @@ import 'package:finance_app/features/auth/ui/login_screen/forget_password_screen
 import 'package:finance_app/features/auth/ui/login_screen/login_screen.dart';
 import 'package:finance_app/features/auth/ui/login_screen/password_changed_screen.dart';
 import 'package:finance_app/features/auth/ui/register_screen/ui/register_screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:finance_app/features/verify_otp/ui/verify_otp_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/on_boarding/on_boarding_screen.dart';
 
 class AppRouter {
   static GoRouter goRouter = GoRouter(
-    initialLocation: Routes.createNewPasswordScreen,
+    initialLocation: Routes.onBoardingScreen,
     routes: [
       GoRoute(
         path: Routes.onBoardingScreen,
@@ -43,6 +43,11 @@ class AppRouter {
         path: Routes.createNewPasswordScreen,
         name: Routes.createNewPasswordScreen,
         builder: (context, state) => const CreateNewPasswordScreen(),
+      ),
+      GoRoute(
+        path: Routes.verifyOtpScreen,
+        name: Routes.verifyOtpScreen,
+        builder: (context, state) => const VerifyOtpScreen(),
       ),
 
 

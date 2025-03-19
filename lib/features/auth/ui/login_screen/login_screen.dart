@@ -10,7 +10,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/styling/app_colors.dart';
 import '../../../../core/widgets/custom_back_button.dart';
-import '../../../../generated/assets.dart';
 import '../../widgets/dont_or_have_account.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -117,6 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   if(formKey.currentState!.validate()) {
                     print("email: ${emailController.text}");
                     print("password: ${passwordController.text}");
+                    GoRouter.of(context).pushNamed(Routes.verifyOtpScreen);
                   }
                 }),
                 verticalSpace(35),
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 verticalSpace(22),
                 LoginRegisterMethodsDisplayedInRow(),
                 verticalSpace(90),
-                DontOrHaveAccount(title: "Don't have an account? ", subTitle: "Register", onPressed: (){
+                CustomRichText(title: "Don't have an account? ", subTitle: "Register", onPressed: (){
                   GoRouter.of(context).pushNamed(Routes.registerScreen);
                 },),
               ],
