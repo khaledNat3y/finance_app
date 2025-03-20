@@ -32,8 +32,10 @@ abstract class AppStyles {
     fontSize: 12.sp,
     fontFamily: AppFonts.mainFontFamily,
     fontWeight: FontWeightHelper.semiBold,
-    color: AppColors.black,
+    color: AppColors.greyWithOpacity,
   );
+
+
 
   static TextStyle font15BlackMedium = TextStyle(
     fontSize: 15.sp,
@@ -85,6 +87,50 @@ abstract class AppStyles {
     fontFamily: AppFonts.mainFontFamily,
     fontWeight: FontWeightHelper.bold,
     color: AppColors.primaryColor,
+  );
+
+  static TextStyle font18accentColorBSemiBoldOld = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.accentColor,
+  );
+
+  static TextStyle font12AccentColorMedium = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.accentColor,
+  );
+  static TextStyle font12WhiteBold = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.white,
+  );
+  static TextStyle font14GreyMedium = TextStyle(
+    fontSize: 14.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.bold,
+    color: Color(0xffFDFDFD),
+  );
+  static TextStyle font24WhiteSemiBold = TextStyle(
+    fontSize: 24.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.white,
+  );
+  static TextStyle font18BlackBold = TextStyle(
+    fontSize: 18.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.black,
+  );
+  static TextStyle font12WhiteMedium = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: AppFonts.mainFontFamily,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.white,
   );
 
 }

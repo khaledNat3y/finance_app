@@ -18,7 +18,7 @@ class LoginMethodWidget extends StatelessWidget {
         width: 105.w,
         height: 56.h,
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.lightGrey, width: 1.w),
+          border: Border.all(color: AppColors.lighterGrey, width: 1.w),
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Center(child: SvgPicture.asset(iconImagePath, width: 23.64.w, height: 23.64.h,)),

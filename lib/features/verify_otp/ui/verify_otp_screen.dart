@@ -62,8 +62,8 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                 selectedFillColor: AppColors.white,
                 activeColor: AppColors.primaryColor,
                 activeFillColor: AppColors.white,
-                inactiveColor: AppColors.lightGrey,
-                inactiveFillColor: AppColors.lightGrey.withAlpha(1),
+                inactiveColor: AppColors.lighterGrey,
+                inactiveFillColor: AppColors.lighterGrey.withAlpha(1),
               ),
               onChanged: (value) {
                 print("pin value: $value");
