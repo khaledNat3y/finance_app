@@ -39,6 +39,8 @@ dependencies:
   flutter_svg: ^2.0.17
   intl: ^0.20.2
   pin_code_fields: ^8.0.1
+  carousel_slider: ^5.0.0
+  dots_indicator: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -67,7 +69,9 @@ flutter:
     - assets/images/
     - assets/fonts/
     - assets/svgs/
-
+    - assets/svgs/home_screen_svgs/
+    - assets/svgs/home_screen_svgs/active/
+    - assets/svgs/home_screen_svgs/inactive/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

@@ -11,12 +11,12 @@ class OrLoginRegisterWith extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: Divider(color: AppColors.lightGrey, thickness: 1.w,)),
+        Expanded(child: Divider(color: AppColors.lighterGrey, thickness: 1.w,)),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Text(title, style: AppStyles.font14GreySemiBold,),
         ),
-        Expanded(child: Divider(color: AppColors.lightGrey, thickness: 1.w,)),
+        Expanded(child: Divider(color: AppColors.lighterGrey, thickness: 1.w,)),
       ],
     );
   }

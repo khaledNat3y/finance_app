@@ -7,11 +7,12 @@ import 'package:finance_app/features/auth/ui/register_screen/ui/register_screen.
 import 'package:finance_app/features/verify_otp/ui/verify_otp_screen.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/main_screen/ui/main_screen.dart';
 import '../../features/on_boarding/on_boarding_screen.dart';
 
 class AppRouter {
   static GoRouter goRouter = GoRouter(
-    initialLocation: Routes.onBoardingScreen,
+    initialLocation: Routes.homeScreen,
     routes: [
       GoRoute(
         path: Routes.onBoardingScreen,
@@ -49,6 +50,12 @@ class AppRouter {
         name: Routes.verifyOtpScreen,
         builder: (context, state) => const VerifyOtpScreen(),
       ),
+      GoRoute(
+        path: Routes.homeScreen,
+        name: Routes.homeScreen,
+        builder: (context, state) => const MainScreen(),
+      ),
+
 
 
     ]
