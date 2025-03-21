@@ -12,6 +12,7 @@ class PrimaryButtonWidget extends StatelessWidget {
   final double? height;
   final double? bordersRadius;
   final double? fontSize;
+  final EdgeInsetsGeometry? padding;
 
   const PrimaryButtonWidget({
     super.key,
@@ -21,7 +22,7 @@ class PrimaryButtonWidget extends StatelessWidget {
     this.width,
     this.height,
     this.bordersRadius,
-    this.buttonColor, this.fontSize,
+    this.buttonColor, this.fontSize, this.padding,
   });
 
   @override
@@ -33,7 +34,8 @@ class PrimaryButtonWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(bordersRadius ?? 8.r),
         ),
-        fixedSize: Size(width ?? 331.w, height ?? 50.h),
+        padding: padding,
+        fixedSize: Size(width ?? 331.w, height ?? 56.h),
       ),
       child: Text(
         buttonText ?? "",
