@@ -12,7 +12,7 @@ import '../../features/on_boarding/on_boarding_screen.dart';
 
 class AppRouter {
   static GoRouter goRouter = GoRouter(
-    initialLocation: Routes.homeScreen,
+    initialLocation: Routes.onBoardingScreen,
     routes: [
       GoRoute(
         path: Routes.onBoardingScreen,
@@ -51,8 +51,8 @@ class AppRouter {
         builder: (context, state) => const VerifyOtpScreen(),
       ),
       GoRoute(
-        path: Routes.homeScreen,
-        name: Routes.homeScreen,
+        path: Routes.mainScreen,
+        name: Routes.mainScreen,
         builder: (context, state) => const MainScreen(),
       ),
 

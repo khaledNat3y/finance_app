@@ -9,7 +9,9 @@ class Assets {
   static const String fontsUrbanistBold = 'assets/fonts/Urbanist-Bold.ttf';
   static const String fontsUrbanistMedium = 'assets/fonts/Urbanist-Medium.ttf';
   static const String fontsUrbanistRegular = 'assets/fonts/Urbanist-Regular.ttf';
+  static const String imagesAppSplash = 'assets/images/app_splash.png';
   static const String imagesCard = 'assets/images/card.png';
+  static const String imagesCharts = 'assets/images/charts.png';
   static const String imagesLayer1 = 'assets/images/layer1.png';
   static const String imagesLayer2 = 'assets/images/layer2.png';
   static const String imagesOnBoardingImage = 'assets/images/onBoardingImage.png';
@@ -24,5 +26,6 @@ class Assets {
   static const String svgsNotificationIcon = 'assets/svgs/notification_icon.svg';
   static const String svgsSend = 'assets/svgs/send.svg';
   static const String svgsSuccessMark = 'assets/svgs/success_mark.svg';
+  static const String svgsVisa = 'assets/svgs/visa.svg';
 
 }

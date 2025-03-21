@@ -2,6 +2,7 @@ import 'package:finance_app/core/styling/app_colors.dart';
 import 'package:finance_app/core/styling/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/styling/app_styles.dart';
 import '../../../../generated/assets.dart';
@@ -9,17 +10,20 @@ import '../../../../generated/assets.dart';
 class CardItemWidget extends StatelessWidget {
   final String title;
   final double balance;
-  const CardItemWidget({super.key, required this.title, required this.balance});
+  final double? width;
+  final double? height;
+  final Color? cardColor;
+  const CardItemWidget({super.key, required this.title, required this.balance, this.width, this.height, this.cardColor});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          width: 207.w,
-          height: 263.h,
+          width: width ?? 207.w,
+          height: height ?? 263.h,
           decoration: BoxDecoration(
-            color: AppColors.primaryColor,
+            color: cardColor ?? AppColors.primaryColor,
             borderRadius: BorderRadius.circular(16.r),
           ),
         ),
@@ -87,6 +91,11 @@ class CardItemWidget extends StatelessWidget {
           bottom: 26.h,
           left: 24.w,
           child: Text("****  3434", style: AppStyles.font16GreyMedium),
+        ),
+        Positioned(
+          right: 26.h,
+          top: 24.w,
+          child: SvgPicture.asset(Assets.svgsVisa),
         ),
       ],
     );
