@@ -1,5 +1,4 @@
 import 'package:finance_app/core/styling/app_styles.dart';
-import 'package:finance_app/core/styling/spacing.dart';
 import 'package:finance_app/features/main_screen/ui/screens/home_screen.dart';
 import 'package:finance_app/features/main_screen/ui/screens/profile_screen.dart';
 import 'package:finance_app/features/main_screen/ui/screens/statistic_screen.dart';
@@ -20,15 +19,27 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
-  List<Widget> screens = [
-    HomeScreen(),
-    StatisticScreen(),
-    Container(child: Text("Add"),),
-    WalletScreen(),
-    ProfileScreen(),
-  ];
   @override
   Widget build(BuildContext context) {
+    List<Widget> screens = [
+      HomeScreen(),
+      StatisticScreen(onIconClickedToBack: (index) {
+        setState(() {
+          currentIndex = index;
+        });
+      },),
+      Container(child: Text("Add"),),
+      WalletScreen(onIconClickedToBack: (index) {
+        setState(() {
+          currentIndex = index;
+        });
+      },),
+      ProfileScreen(onIconClickedToBack: (index) {
+        setState(() {
+          currentIndex = index;
+        });
+      },),
+    ];
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -65,11 +76,11 @@ class _MainScreenState extends State<MainScreen> {
               child: Icon(Icons.add, color: AppColors.primaryColor,),
             ),
           ),label: ""),
-          BottomNavigationBarItem(icon: SvgPicture.asset(Assets.inactiveWalletInactive), activeIcon: SvgPicture.asset(Assets.activeWalletActive), label: "Wallet"),
+          BottomNavigationBarItem(icon: SvgPicture.asset(Assets.inactiveWalletInactive), activeIcon: SvgPicture.asset(Assets.activeWalletActive), label: "My card"),
           BottomNavigationBarItem(icon: SvgPicture.asset(Assets.inactiveProfileInactive), activeIcon: SvgPicture.asset(Assets.activeProfileActive), label: "Profile"),
         ],
       ),
-      body: screens[currentIndex],
+      body: SafeArea(child: screens[currentIndex]),
     );
   }
 }

@@ -74,7 +74,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
             ),
             verticalSpace(36),
             PrimaryButtonWidget(buttonText: "Verify", onPress: (){
-              GoRouter.of(context).pushReplacementNamed(Routes.onBoardingScreen);
+              GoRouter.of(context).pushReplacementNamed(Routes.mainScreen);
             }),
             Spacer(),
             CustomRichText(title: "Didn’t received code? ", subTitle: "Resend", onPressed: (){},)

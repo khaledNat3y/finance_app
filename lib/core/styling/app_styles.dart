@@ -111,8 +111,8 @@ abstract class AppStyles {
   static TextStyle font14GreyMedium = TextStyle(
     fontSize: 14.sp,
     fontFamily: AppFonts.mainFontFamily,
-    fontWeight: FontWeightHelper.bold,
-    color: Color(0xffFDFDFD),
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.grey,
   );
   static TextStyle font24WhiteSemiBold = TextStyle(
     fontSize: 24.sp,
